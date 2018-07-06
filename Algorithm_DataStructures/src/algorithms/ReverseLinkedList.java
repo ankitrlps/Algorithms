@@ -1,53 +1,60 @@
 package algorithms;
 
-public class ReverseLinkedList {
-	
-	Node head;
-	
-	public class Node{
-		int data;
-		Node next;
-		Node(int data){
+public class ReverseLinkedList<E> {
+
+	Node<E> head;
+ 	
+	class Node<E> {
+		Node<E> next;
+		E data;
+
+		Node(E data) {
 			this.data = data;
 		}
 	}
 	
-	Node reverse(Node node){
-		Node prev = null;
-		Node current = node;
-		Node next = null;
-		
-		while(current != null){
-			next = current.next;
-			current.next = prev;
-			prev = current;
-			current = next;
+	public Node<E> reverseList() {
+		if(head != null){
+			Node<E> curr = null;
+			curr = head;
+			Node<E> previous = null;
+			Node<E> temp = null;
+			while(curr != null){
+				temp = curr.next;
+				curr.next = previous;
+				previous = curr;
+				curr = temp;
+			}
+			head = previous;
+			return head;
+		}else{
+			throw new NullPointerException("List is Empty.");
 		}
-		node = prev;
 		
-		return node;
 	}
 	
-	static void print(Node node){
+	public void print(Node<E> node) {
 		while(node != null){
 			System.out.print(node.data + " ");
-			node = node.next;
+			if(node.next == null){
+				break;
+			}else{
+				node = node.next;
+			}
 		}
 	}
-	
+
 	public static void main(String[] args) {
-		ReverseLinkedList rev = new ReverseLinkedList();
-		rev.head = rev.new Node(1);
-		rev.head.next = rev.new Node(2);
-		rev.head.next.next = rev.new Node(3);
-		rev.head.next.next.next = rev.new Node(4);
-		rev.head.next.next.next.next = rev.new Node(5);
+		ReverseLinkedList<Integer> link = new ReverseLinkedList<>();
+		link.head = link.new Node<>(5);
+		link.head.next = link.new Node<>(20);
+		link.head.next.next = link.new Node<>(21);
+		link.head.next.next.next = link.new Node<>(25);
 		
-		print(rev.head);
+		link.head = link.reverseList();
 		
-		rev.head = rev.reverse(rev.head);
-	
-		System.out.println(" ");
-		print(rev.head);
+		link.print(link.head);
+		
+		
 	}
 }
