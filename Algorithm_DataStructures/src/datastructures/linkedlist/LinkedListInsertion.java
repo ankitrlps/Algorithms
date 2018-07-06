@@ -1,5 +1,7 @@
 package datastructures.linkedlist;
 
+import java.util.LinkedList;
+
 public class LinkedListInsertion {
 	Node head;
 
@@ -19,8 +21,7 @@ public class LinkedListInsertion {
 	}
 
 	public static void main(String[] args) {
-		LinkedListInsertion link = new LinkedListInsertion();
-		
+		LinkedListInsertion link = new LinkedListInsertion();		
 		int i = 0;
 		while(i <= 50) {
 			link.pushInFront(i);
