@@ -65,27 +65,27 @@ public class LinkedListCompImpl<E> {
 	}
 
 	public void add(int index, E data) {
-		if(index <= size){
+		if (index <= size) {
 			Node<E> newNode = new Node<E>(data);
 			Node<E> previous = null;
 			Node<E> curr = null;
 			curr = head;
 			int traverser = 0;
-			while(traverser <= index){
-				if(traverser == (index - 1)){
+			while (traverser <= index) {
+				if (traverser == (index - 1)) {
 					previous = curr;
 					curr = curr.getNext();
 					previous.setNext(newNode);
 					newNode.setNext(curr);
 					size++;
 					break;
-				}else{
+				} else {
 					traverser++;
-					if(curr.getNext() != null)
+					if (curr.getNext() != null)
 						curr = curr.getNext();
 				}
 			}
-		}else{
+		} else {
 			throw new NoSuchElementException();
 		}
 	}
@@ -115,84 +115,83 @@ public class LinkedListCompImpl<E> {
 			return;
 		}
 	}
-	
-	
+
 	public void remove(int index) {
-		if(index == 1){
+		if (index == 1) {
 			this.removeFirst();
 			return;
 		}
-		if(index <= size){
+		if (index <= size) {
 			Node<E> curr = null;
 			Node<E> previous = null;
-			curr = head;			
+			curr = head;
 			int traverser = 1;
-			while(traverser < index){
-				if(traverser == (index - 1)){
+			while (traverser < index) {
+				if (traverser == (index - 1)) {
 					previous = curr;
 					curr = curr.getNext();
-					if(curr.getNext() == null){
+					if (curr.getNext() == null) {
 						previous.setNext(null);
 						size--;
 						break;
-					}else{
+					} else {
 						previous.setNext(curr.getNext());
 						size--;
 						break;
 					}
-				}else{
+				} else {
 					traverser++;
-					if(curr.getNext() != null)
+					if (curr.getNext() != null)
 						curr = curr.getNext();
 				}
 			}
-		}else{
+		} else {
 			throw new NoSuchElementException("Please check the index entered.");
 		}
 	}
-		
+
 	public E getFirst() {
-		if(head == null){
+		if (head == null) {
 			return null;
-		}else{
+		} else {
 			return head.getData();
-		} 
+		}
 	}
-	
+
 	public E getLast() {
-		if(head == null){
+		if (head == null) {
 			return null;
-		}else{
+		} else {
 			Node<E> curr = null;
 			curr = head;
-			while(curr != null){
-				if(curr.getNext() == null){
+			while (curr != null) {
+				if (curr.getNext() == null) {
 					return curr.getData();
-				}else{
+				} else {
 					curr = curr.getNext();
 				}
 			}
 		}
 		return null;
 	}
-	
+
 	public E get(int index) {
-		if(index <= size){
+		if (index <= size) {
 			Node<E> curr = null;
 			curr = head;
 			int traverse = 1;
-			while(traverse <= index){
-				if(traverse == index){
+			while (traverse <= index) {
+				if (traverse == index) {
 					return curr.getData();
-				}else{
+				} else {
 					traverse++;
-					if(curr.getNext() != null){
+					if (curr.getNext() != null) {
 						curr = curr.getNext();
 					}
 				}
 			}
 			return null;
-		}else{
+		} else {
 			throw new NoSuchElementException();
 		}
 	}
@@ -211,6 +210,24 @@ public class LinkedListCompImpl<E> {
 		}
 	}
 
+	public void reverseList() {
+		if (head != null) {
+			Node<E> curr = null;
+			Node<E> previous = null;
+			Node<E> tempNext = null;
+			curr = head;
+			while (curr != null) {
+				tempNext = curr.getNext();
+				curr.setNext(previous);
+				previous = curr;
+				curr = tempNext;
+			}
+			head = previous;
+		} else {
+			throw new NullPointerException("List is Empty.");
+		}
+	}
+
 	public static void main(String[] args) {
 		LinkedListCompImpl<Integer> link = new LinkedListCompImpl<>();
 		link.add(5);
@@ -226,52 +243,59 @@ public class LinkedListCompImpl<E> {
 		link.print(link.head);
 		System.out.println();
 
-		//adding at last node
+		// adding at last node
 		System.out.println("Adding At Last Node:");
 		link.addLast(10);
 		link.print(link.head);
 		System.out.println();
-		
-		//Remove First Element
+
+		// Remove First Element
 		System.out.println("Remove First Element:");
 		link.removeFirst();
 		link.print(link.head);
 		System.out.println();
-		
-		//Remove Last Element
+
+		// Remove Last Element
 		System.out.println("Removed Last");
-		link.removeLast();		
+		link.removeLast();
 		link.print(link.head);
 		System.out.println();
-		
-		//adding element with index
+
+		// adding element with index
 		System.out.println("======== START: Adding element with index!! =========");
 		link.add(1, 8);
 		System.out.println();
 		link.print(link.head);
-		
+
 		link.add(2, 65);
 		System.out.println();
 		link.print(link.head);
-		
+
 		link.add(4, 20);
 		System.out.println();
 		link.print(link.head);
 		System.out.println();
 		System.out.println("======== END: Adding element with index!! ========");
 		System.out.println();
-		
+
 		System.out.println("========= START: Removing element from given index =========");
 		link.remove(6);
 		link.print(link.head);
 		System.out.println();
 		System.out.println("========== END: Removing element from given index =========");
-		
+
 		// Getting the Element
 		System.out.println("Getting the Element:");
 		System.out.println("First Element: " + link.getFirst());
 		System.out.println("Last Element: " + link.getLast());
 		System.out.println("Get element with index: " + link.get(2));
-		
+
+		// Reverse the whole list
+		System.out.println();
+		System.out.println("======= START: Reversing the whole list =========");
+		link.reverseList();
+		link.print(link.head);
+		System.out.println();
+		System.out.println("======== END =========");
 	}
 }
