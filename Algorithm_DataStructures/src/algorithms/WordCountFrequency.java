@@ -13,7 +13,7 @@ public class WordCountFrequency {
 			list.add(ss);
 		}
 		
-		Map<String, Integer> map = new HashMap<>();
+		Map<Object, Integer> map = new HashMap<>();
 		
 		for(String key : list){
 			if(!map.containsKey(key)){
@@ -23,8 +23,8 @@ public class WordCountFrequency {
 			}
 		}
 		
-		for(Map.Entry<String, Integer> set : map.entrySet()){
-			System.out.println(set.getKey() + " : " + set.getValue());
+		for(Map.Entry<Object, Integer> set : map.entrySet()){
+			System.out.println("Count of " + set.getKey() + " : " + set.getValue());
 		}
 		
 	}

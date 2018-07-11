@@ -73,11 +73,15 @@ public class SortArrayAndSearchValue {
 		int arr[] = { 12, 32, 20, 6, 40, 14, 14, 8 };
 		int high = arr.length - 1;
 		SortArrayAndSearchValue ms = new SortArrayAndSearchValue();
+		
+		//Sorting
 		ms.sort(arr, 0, high);
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}
-		int key = 20;
+		
+		//Searching
+		int key = 12;
 		int result = ms.binarySearch(arr, 0, high, key);
 		if (result == -1) {
 			System.out.println("Not found");

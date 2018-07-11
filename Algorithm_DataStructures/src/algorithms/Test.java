@@ -1,8 +1,5 @@
 package algorithms;
 
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
