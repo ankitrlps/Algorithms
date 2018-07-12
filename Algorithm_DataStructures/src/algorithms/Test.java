@@ -19,6 +19,10 @@ public class Test {
 		map.put("sis", 3);
 		
 		System.out.println(map.values());
+		
+		String s = "110";
+		int i = Integer.parseInt(s);
+		System.out.println(i);
 	}
 
 }

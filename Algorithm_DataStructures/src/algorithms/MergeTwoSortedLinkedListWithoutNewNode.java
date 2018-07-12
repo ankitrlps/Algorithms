@@ -1,6 +1,6 @@
 package algorithms;
 
-public class MergeTwoLinkedListWithoutNewNode {
+public class MergeTwoSortedLinkedListWithoutNewNode {
 
 	static class Node<E>{
 		Node<E> next;
