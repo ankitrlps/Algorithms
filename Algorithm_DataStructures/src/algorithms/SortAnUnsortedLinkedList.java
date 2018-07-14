@@ -1,7 +1,5 @@
 package algorithms;
 
-import algorithms.MergeTwoSortedLinkedListWithoutNewNode.Node;
-
 //This is using MergeSort technique.
 
 public class SortAnUnsortedLinkedList {
@@ -44,9 +42,9 @@ public class SortAnUnsortedLinkedList {
 		return head;
 	}
 
-	private static Node mergeSort(Node node) {
-		if (node == null) {
-			return null;
+	private Node mergeSort(Node node) {
+		if (node == null || node.next == null) {
+			return node;
 		}
 		Node middle = findMiddle(node);
 		Node nextToMiddle = middle.next;
@@ -58,9 +56,9 @@ public class SortAnUnsortedLinkedList {
 		return sorted;
 	}
 
-	private static Node findMiddle(Node node) {
+	private Node findMiddle(Node node) {
 		if (node == null) {
-			return node;
+			return node; 
 		}
 
 		Node slow = node;
@@ -102,18 +100,17 @@ public class SortAnUnsortedLinkedList {
 	public static void main(String[] args) {
 		SortAnUnsortedLinkedList list = new SortAnUnsortedLinkedList();
 
-		list.push(10);
-		list.push(5);
-		list.push(78);
-		list.push(47);
-		list.push(55);
-		list.push(7);
-		list.push(89);
-		list.push(20);
+		Node li2 = list.new Node(4);
+		li2.next = list.new Node(2);
+		li2.next.next = list.new Node(-42);
+		li2.next.next.next = list.new Node(22);
+		li2.next.next.next.next = list.new Node(54);
+		li2.next.next.next.next.next = list.new Node(13);
+		li2.next.next.next.next.next.next = list.new Node(1);
 
-		print(list.head);
+		print(li2);
 
-		Node sortedNode = mergeSort(list.head);
+		Node sortedNode = list.mergeSort(li2);
 
 		print(sortedNode);
 
