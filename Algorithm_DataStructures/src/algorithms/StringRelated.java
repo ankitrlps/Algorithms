@@ -11,8 +11,8 @@ public class StringRelated {
 		Arrays.sort(c2);
 		
 		StringBuilder s = new StringBuilder();
-		for(int i = 0; i < c1.length; i++){
-			s.append(c1[i]);
+		for(int z = 0; z < c1.length; z++){
+			s.append(c1[z]);
 		}
 		for(int j = 0 ; j < c2.length; j++){
 			s.append(c2[j]);

@@ -7,14 +7,11 @@ public class LargestPrimeFactor {
 	}
 	
 	private long compute(long num) {
-		
-		try {
+		if(num%2L == 0){
 			
-			if(num%2L == 0){
-				
-			}
-			
-			for (long i = 3L; i < Math.sqrt(num); i++) {
+		}
+		try {			
+			for (long i = 3L; i < Math.sqrt(num); i = i + 2) {
 				if ((num % i) == 0) {
 					num = num/i;
 				}

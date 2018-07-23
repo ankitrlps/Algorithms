@@ -59,19 +59,20 @@ public class DetectRemoveLoopInLinkedList {
 		DetectRemoveLoopInLinkedList link = new DetectRemoveLoopInLinkedList();
 		Node head = link.new Node(40);
 		head.next = link.new Node(20);
-		head.next.next = link.new Node(21);
+/*		head.next.next = link.new Node(21);
 		head.next.next.next = link.new Node(25);
 		head.next.next.next.next = link.new Node(7);
 		head.next.next.next.next.next = link.new Node(85);
-		head.next.next.next.next.next.next = link.new Node(60);
+		head.next.next.next.next.next.next = link.new Node(60);*/
 
 		// printing before creating loop
 		System.out.println("printing before creating loop");
 		print(head);
 
 		// creating a loop
-		head.next.next.next.next.next.next.next = head.next.next;
+		//head.next.next.next.next.next.next.next = head.next.next;
 
+		head.next.next = head;
 		// detecting and removing the loop
 		Node node = detectAndRemove(head);
 		System.out.println();

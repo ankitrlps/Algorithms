@@ -1,5 +1,7 @@
 package designpatterns.factoryDesign;
 
 public interface Shape {
-	void shape();
+	default void shape(){
+		System.out.println("Shape from interface...");
+	}
 }

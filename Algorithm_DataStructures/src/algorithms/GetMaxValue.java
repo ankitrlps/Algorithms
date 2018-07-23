@@ -6,7 +6,7 @@ public class GetMaxValue {
 		System.out.println(getMax(new int[] { 1, 9, 7, 8, 6, 5 }, 0, 6 - 1));
 		System.out.println(getMax(new int[] { 1, 3, 7, 13, 10, 5 }, 0, 6 - 1));
 		System.out.println(getMax(new int[] { 1, 2, 10, 9, 8, 5 }, 0, 6 - 1));
-		System.out.println(getMax(new int[] { 1, 9, 10, 11, 12, 11, 10, 5 }, 0, 8 - 1));
+		System.out.println(getMax(new int[] { 1, 9, 10, 11, 12, 11, 10, 60, 5 }, 0, 9-1));
 	}
 
 	static int getMax(int[] arr, int low, int high) {

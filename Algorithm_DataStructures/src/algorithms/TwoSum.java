@@ -9,6 +9,7 @@ public class TwoSum {
 				if ((nums[i] + nums[j]) == target) {
 					newArr[0] = i;
 					newArr[1] = j;
+					break;
 				}
 			}
 		} 
@@ -18,7 +19,7 @@ public class TwoSum {
 	public static void main(String[] args) {
 		TwoSum sol = new TwoSum();
 		int[] nums = { 2, 7, 11, 15 };
-		int[] res = sol.twoSum(nums, 18);
+		int[] res = sol.twoSum(nums, 17);
 		System.out.println("Here:" + res[0] + " " + res[1]);
 	}
 }
