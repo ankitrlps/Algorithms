@@ -3,11 +3,15 @@ package algorithms;
 public class LongestPalindromicSubstring {
 
 	private static void printSubstring(String s, int start, int end) {
+		//return s.substring(start, end - 1);
 		System.out.println(s.substring(start, end - 1));
 	}
 	
 	
-	private static int longestPalindrome(String s) {
+	private static int longestPalindrome(String s) throws NullPointerException {		
+		if(s.length() == 0){
+			throw new NullPointerException("String is empty.");
+		}
 		int n = s.length();
 		int max_len = 1;
 		
@@ -42,12 +46,11 @@ public class LongestPalindromicSubstring {
 		}
 		
 		printSubstring(s, start, start + max_len + 1);
-		
 		return max_len;
 	}
 
 	public static void main(String[] args) {
-		String s = "geeksskeegfor";
+		String s = "forgeeksskeegfor";
 		System.out.println("Palindromic Substring: " + longestPalindrome(s));
 	}
 }
