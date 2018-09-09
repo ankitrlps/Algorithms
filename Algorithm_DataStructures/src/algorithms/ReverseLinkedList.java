@@ -52,7 +52,6 @@ public class ReverseLinkedList<E> {
 		link.head.next.next.next = link.new Node<>(25);
 		
 		link.head = link.reverseList();
-		
 		link.print(link.head);
 		
 		

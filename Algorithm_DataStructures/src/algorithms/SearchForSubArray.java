@@ -79,13 +79,13 @@ public class SearchForSubArray {
 	public static void main(String args[]) {
 		SearchForSubArray sub = new SearchForSubArray();
 		int arr1[] = { 11, 1, 13, 21, 3, 7 };
-		int arr2[] = { 11, 3, 7, 11 };
+		int arr2[] = { 11, 3, 7, 22 };
 		int size1 = arr1.length - 1;
 		int size2 = arr2.length - 1;
 		if (sub.isSubsetOf(arr1, arr2, size1, size2) == true) {
 			System.out.println("Yes, arr1 is a subset of arr2.");
 		} else {
-			System.out.println("No");
+			System.out.println("Not a Subset.");
 		}
 	}
 
