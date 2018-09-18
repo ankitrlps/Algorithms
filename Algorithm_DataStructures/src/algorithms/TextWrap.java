@@ -6,8 +6,8 @@ public class TextWrap {
 	 * Text Wrap: Given a string and an integer with column width. Align the
 	 * given string according to the column width given. 
 	 * 
-	 * This functionality is similar to how text wrap option of notepad/notepad++ or how
-	 * Microsoft's Word Processor manipulates the strings when margin's are
+	 * This functionality is similar to how text wrap option of notepad/notepad++ works or how
+	 * Microsoft's Word Processor manipulates the strings when margins are
 	 * modified.
 	 */
 	public static String wrapper(String s, int col) {
