@@ -18,7 +18,9 @@ public class TextWrap {
 		boolean newWord = false;
 		boolean spaces = false;
 		StringBuilder sub = new StringBuilder();
-
+		
+		if(col < 1) return "Column width must be one or more.";
+		
 		if (col == 1) {
 			int z = 0;
 			while (z < s.length()) {
