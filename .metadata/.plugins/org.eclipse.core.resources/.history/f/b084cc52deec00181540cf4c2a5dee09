@@ -1,0 +1,11 @@
+package com.learning.example;
+
+public class Test {
+public static void main(String[] args) {
+	String fullname = "Ankit Leela Pawan";
+	int name = fullname.lastIndexOf(" ");
+	String firstName = fullname.substring(0, name);
+	System.out.println(firstName + " || LastName: " + fullname.substring(name, fullname.length() - 1));
+
+}
+}

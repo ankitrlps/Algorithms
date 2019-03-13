@@ -1,0 +1,9 @@
+package com.learning.example;
+
+public class Test {
+public static void main(String[] args) {
+	int x = 5;
+	long a = x;
+	System.out.println(Math.toIntExact(a));
+}
+}

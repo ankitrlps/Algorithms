@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 7 elements from project &apos;DroneForensics&apos;&#x0D;&#x0A;- Original project: &apos;DroneForensics&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     DroneForensics/src/dji&#x0D;&#x0A;     DroneForensics/src/dji.controllers&#x0D;&#x0A;     DroneForensics/src/dji.fxmls&#x0D;&#x0A;     DroneForensics/src/dji.html&#x0D;&#x0A;     DroneForensics/src/dji.images&#x0D;&#x0A;     DroneForensics/src/dji.pojoClass&#x0D;&#x0A;     DroneForensics/src/dji.tds&#x0D;&#x0A;- Delete subpackages" description="Delete elements" element1="/src&lt;dji.tds" element2="/src&lt;dji.pojoClass" element3="/src&lt;dji.images" element4="/src&lt;dji.html" element5="/src&lt;dji.fxmls" element6="/src&lt;dji.controllers" element7="/src&lt;dji" elements="7" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1543331762274" subPackages="true" version="1.0"/>
+</session>

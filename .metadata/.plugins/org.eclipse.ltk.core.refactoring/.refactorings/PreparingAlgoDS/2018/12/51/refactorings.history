@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.algos.ds.learnings.BinarySearch&apos; to &apos;BinarySearchLearning&apos;&#x0D;&#x0A;- Original project: &apos;PreparingAlgoDS&apos;&#x0D;&#x0A;- Original element: &apos;com.algos.ds.learnings.BinarySearch&apos;&#x0D;&#x0A;- Renamed element: &apos;com.algos.ds.learnings.BinarySearchLearning&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;BinarySearch&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.algos.ds.learnings{BinarySearch.java[BinarySearch" matchStrategy="1" name="BinarySearchLearning" qualified="false" references="true" similarDeclarations="false" stamp="1545062609105" textual="false" version="1.0"/>
+</session>
